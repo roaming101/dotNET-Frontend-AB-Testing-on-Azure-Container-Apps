@@ -7,7 +7,7 @@ on:
 
 env:
   # alphanumeric string under 14 characters
-  RESOURCE_GROUP_NAME: aca-revision-demo
+  RESOURCE_GROUP_NAME: aca-revision
   # specify your preferred region
   REGION: eastus
   FRONTEND_DOCKER: FeatureFlagsWithContainerApps/Dockerfile
