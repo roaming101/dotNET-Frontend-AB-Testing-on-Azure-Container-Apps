@@ -6,7 +6,6 @@ on:
     - deploy
 
 env:
-  
   # alphanumeric string under 14 characters
   RESOURCE_GROUP_NAME: aca-revision-demo
   # specify your preferred region
