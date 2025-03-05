@@ -14,6 +14,7 @@ env:
 
   FRONTEND_DOCKER: FeatureFlagsWithContainerApps/Dockerfile
   FRONTEND_IMAGE: frontend
+  BICEP_PATH: './Azure/main.bicep'
 
 jobs:
   provision:
@@ -44,7 +45,7 @@ jobs:
         inlineScript: >
           echo "Creating resources"
 
-          az deployment group create --resource-group ${{ env.RESOURCE_GROUP_NAME }} --template-file '/github/workspace/Azure/main.bicep' --debug
+          az deployment group create --resource-group ${{ env.RESOURCE_GROUP_NAME }} --template-file ${{ env.BICEP_PATH }} --debug
 
   build:
     runs-on: ubuntu-latest
